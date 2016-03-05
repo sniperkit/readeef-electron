@@ -7,4 +7,4 @@ Version=1.0
 StartupNotify=true
 Name=readeef Electron client
 Terminal=false
-Icon=readeef-256
+Icon=readeef-client
