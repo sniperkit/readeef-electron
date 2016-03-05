@@ -1,0 +1,12 @@
+{
+  "name": "readeef",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "datauri": "^1.0.4",
+	"electron-prebuilt": "~0.36"
+  },
+  "bin": {
+    "readeef-client": "bin.js"
+  }
+}

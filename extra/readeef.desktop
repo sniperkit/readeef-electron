@@ -1,0 +1,10 @@
+[Desktop Entry]
+Hidden=false
+NoDisplay=false
+Exec=readeef-client
+Type=Application
+Version=1.0
+StartupNotify=true
+Name=readeef Electron client
+Terminal=false
+Icon=readeef-256
