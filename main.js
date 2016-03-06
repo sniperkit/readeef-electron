@@ -14,6 +14,7 @@ require('crash-reporter').start({
 });
 
 var iconuri = new Datauri(__dirname + '/images/readeef-96.png');
+var smallIconuri = new Datauri(__dirname + '/images/readeef-32.png');
 
 var readeef = {
 	// Keep a global reference of the window object, if you don't, the window will
@@ -146,7 +147,7 @@ app.on('ready', function() {
 	});
 
 	ipcMain.on('get-icon-uri', function(evt) {
-		evt.returnValue = JSON.stringify({success: true, value: iconuri.content});
+		evt.returnValue = JSON.stringify({success: true, value: smallIconuri.content});
 	});
 
 });

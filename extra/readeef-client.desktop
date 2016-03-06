@@ -8,3 +8,5 @@ StartupNotify=true
 Name=readeef Electron client
 Terminal=false
 Icon=readeef-client
+StartupWMClass=readeef
+Categories=Network
