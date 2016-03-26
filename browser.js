@@ -40,28 +40,9 @@ if (!result || !result.success || result.value === null || result.value) {
 	}, 5000));
 }
 
-window.open = function(url, name, features) {
-	urlParser.href = url;
-	if (urlParser.hostname == host) {
-		windowOpen(url, name, features);
-		return;
-	}
-	shell.openExternal(url);
-};
-
-window.addEventListener('click', function(event) {
-	var target = event.target;
-	do {
-		if (target.nodeName == 'A') break;
-	} while (target.parentNode && (target = target.parentNode))
-
-	if (target.nodeName !== 'A' || target.hostname == host) {
-		return;
-	}
-
+window.addEventListener('pre-article-open', function(event) {
 	event.preventDefault();
-
-	shell.openExternal(target.href);
+	shell.openExternal(event.detail.link);
 });
 
 function debounce(func, wait, immediate) {
