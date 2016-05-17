@@ -142,11 +142,13 @@ app.on('ready', function() {
 	});
 
 	ipcMain.on('main-window-is-focused', function(evt) {
-		evt.returnValue = JSON.stringify({success: true, value: readeef.mainWindow.isFocused()});
+		evt.returnValue = JSON.stringify({success: true, value: readeef.mainWindow && readeef.mainWindow.isFocused()});
 	});
 
 	ipcMain.on('reload-main-window', function(evt) {
-		readeef.mainWindow.reload();
+		if (readeef.mainWindow) {
+			readeef.mainWindow.reload();
+		}
 	});
 
 	ipcMain.on('restart-main-window', function(evt) {

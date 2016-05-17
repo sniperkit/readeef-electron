@@ -10,12 +10,16 @@ function load() {
 		return;
 	} 
 
+	data = {};
 	if (!fs.existsSync(dataFilePath)) {
-		data = {};
 		return;
 	}
 
-	data = JSON.parse(fs.readFileSync(dataFilePath, 'utf-8')); 
+	content = fs.readFileSync(dataFilePath, 'utf-8');
+	if (content) {
+		data = JSON.parse(content); 
+	}
+
 }
 
 function save() {
