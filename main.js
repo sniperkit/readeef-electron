@@ -1,6 +1,5 @@
-var app = require('app');  // Module to control application life.
-var BrowserWindow = require('browser-window');  // Module to create native browser window.
-var ipcMain = require('electron').ipcMain;
+const electron = require('electron')
+const {app, BrowserWindow, ipcMain, crashReporter} = electron;
 var Datauri = require('datauri');
 var storage = require('./storage');
 var checker = require('./url-checker');
@@ -8,7 +7,7 @@ var menu = require('./menu');
 var pkg = require('./package.json');
 
 // Report crashes to our server.
-require('crash-reporter').start({
+crashReporter.start({
 		companyName: "Sugr",
 		submitURL: "https://github.com/urandom/readeef/issues",
 });

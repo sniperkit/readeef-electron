@@ -1,7 +1,7 @@
-var app = require('app');
+const electron = require('electron');
+const {app, ipcMain} = electron;
 var fs = require('fs');
 var path = require('path');
-var ipcMain = require('electron').ipcMain;
 var data = null;
 var dataFilePath = path.join(app.getPath('userData'), 'data.json'); 
 
