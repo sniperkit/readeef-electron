@@ -83,6 +83,7 @@ var readeef = {
 			width: lastWindowState.width, 
 			height: lastWindowState.height,
 			icon: __dirname + '/images/readeef-96.png',
+			autoHideMenuBar: true,
 		};
 
 		// and load the index.html of the app.
