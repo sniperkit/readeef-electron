@@ -87,7 +87,7 @@ var readeef = {
 
 		// and load the index.html of the app.
 		if (storage.get("url")) {
-			windowOptions['node-integration'] = false;
+			windowOptions['nodeIntegration'] = false;
 			windowOptions['preload'] =  __dirname + '/browser.js';
 			readeef.mainWindow = new BrowserWindow(windowOptions);
 			readeef.mainWindow.loadURL(storage.get('url'));
