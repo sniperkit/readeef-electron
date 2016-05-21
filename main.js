@@ -87,8 +87,9 @@ var readeef = {
 
 		// and load the index.html of the app.
 		if (storage.get("url")) {
-			windowOptions['nodeIntegration'] = false;
-			windowOptions['preload'] =  __dirname + '/browser.js';
+			windowOptions.webPreferences = {
+				preload:  __dirname + '/browser.js',
+			};
 			readeef.mainWindow = new BrowserWindow(windowOptions);
 			readeef.mainWindow.loadURL(storage.get('url'));
 		} else {
@@ -96,9 +97,8 @@ var readeef = {
 			readeef.mainWindow.loadURL('file://' + __dirname + '/index.html?initial');
 		}
 
-
 		// Open the DevTools.
-		// mainWindow.openDevTools();
+		readeef.mainWindow.openDevTools();
 		readeef.mainWindow.on('close', function() {
 			var bounds = this.getBounds(); 
 			storage.set("lastWindowState", {
