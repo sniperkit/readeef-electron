@@ -98,7 +98,7 @@ var readeef = {
 		}
 
 		// Open the DevTools.
-		readeef.mainWindow.openDevTools();
+		// readeef.mainWindow.openDevTools();
 		readeef.mainWindow.on('close', function() {
 			var bounds = this.getBounds(); 
 			storage.set("lastWindowState", {
