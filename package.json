@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git://github.com/urandom/readeef-electron.git"
   },
+  "scripts": {
+    "start": "electron ."
+  },
   "bugs": {
     "url": "https://github.com/urandom/readeef-electron/issues"
   },
@@ -17,10 +20,12 @@
     "url": "http://sugr.org/"
   },
   "dependencies": {
-    "datauri": "^1.0.4",
-	"electron-prebuilt": "~1.1"
+    "datauri": "^1.0.5"
   },
   "bin": {
     "readeef-client": "bin.js"
+  },
+  "devDependencies": {
+    "electron": "1.7.10"
   }
 }
