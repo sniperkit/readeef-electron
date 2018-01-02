@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var spawn = require('child_process').spawn;
-var electronPath = require('electron-prebuilt');
+var electronPath = require('electron');
 
 var args = [__dirname];
 
