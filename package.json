@@ -26,6 +26,6 @@
     "readeef-client": "bin.js"
   },
   "devDependencies": {
-    "electron": "1.7.10"
+    "electron": "1.7.11"
   }
 }
